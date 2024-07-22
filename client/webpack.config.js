@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         title: 'Text Editor',
-        template: './client/index.html'
+        template: './index.html'
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -29,6 +29,7 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
+        publicPath: '/',
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
         description: 'Text editor app',

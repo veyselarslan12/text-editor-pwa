@@ -1,13 +1,13 @@
 {
   "name": "JATE",
   "version": "1.0.0",
-  "description": "",
+  "description": "text editor",
   "main": "server.js",
   "scripts": {
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev",
-    "start": "cd server && npm start",
+    "start": "cd client && npm run build && cd ../server && npm start",
     "install": "cd client && npm i && cd ../server && npm i",
-    "client": "cd client && npm run build"
+    "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
